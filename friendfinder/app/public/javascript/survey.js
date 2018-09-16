@@ -12,10 +12,6 @@ $("#modal-close").on('click', function(ev) {
     $('#modal-content').modal('hide');
 });
 
-$("#failure-modal-close").on('click', function(ev) {
-    $('#failure-modal').modal('hide');
-});
-
 const url = "./api/friends";
 
 function submitSurvey() {
@@ -39,18 +35,23 @@ function submitSurvey() {
                 let friendName = friendResponse._friend.name;
                 let friendPhoto = friendResponse._friend.photo;
                 // Show modal with data
+                $("#match-name-failed").html("");
                 $("#match-name").html(friendName);
                 $("#match-img").attr("src", friendPhoto);
                 $('#modal-content').modal('show');
             } else {
                 // Show modal with error
                 $("#match-name-failed").html("Unfortunately, no matches were found");
-                $('#failure-modal').modal('show');
+                $("#match-name").html("");
+                $("#match-img").attr("src", "");
+                $('#modal-content').modal('show');
             }
         } else {
             // Show modal with error
             $("#match-name-failed").html("Unfortunately, no matches were found");
-            $('#failure-modal').modal('show');
+            $("#match-name").html("");
+            $("#match-img").attr("src", "");
+            $('#modal-content').modal('show');
         }
     });
 }
