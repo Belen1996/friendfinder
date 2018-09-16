@@ -38,20 +38,20 @@ function submitSurvey() {
                 $("#match-name-failed").html("");
                 $("#match-name").html(friendName);
                 $("#match-img").attr("src", friendPhoto);
-                $('#modal-content').modal('show');
+                $('#results-modal').modal('show');
             } else {
                 // Show modal with error
                 $("#match-name-failed").html("Unfortunately, no matches were found");
                 $("#match-name").html("");
                 $("#match-img").attr("src", "");
-                $('#modal-content').modal('show');
+                $('#results-modal').modal('show');
             }
         } else {
             // Show modal with error
             $("#match-name-failed").html("Unfortunately, no matches were found");
             $("#match-name").html("");
             $("#match-img").attr("src", "");
-            $('#modal-content').modal('show');
+            $('#results-modal').modal('show');
         }
     });
 }
