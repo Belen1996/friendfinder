@@ -1,0 +1,31 @@
+h3 {
+    color: rgb(179, 129, 224);
+}
+
+h4 {
+    color: rgb(102, 95, 95);
+}
+
+h2 {
+    color: pink;
+}
+
+h1 {
+    color: rgb(179, 129, 224);
+    font-size: 55px;
+}
+
+#submit {
+    width: 115px;
+    background-color: pink;
+    border-color: palevioletred;
+}
+
+#survey-button {
+    background-color: pink;
+    border-color: palevioletred;
+}
+
+#home-text {
+    text-align: center;
+}
